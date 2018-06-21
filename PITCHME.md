@@ -75,7 +75,7 @@ ac8326d Polish mockito usage
 ### Why good commit messages matters?
 
 
-> Re-establishing the context of a pieamece of code is wasteful. We can’t avoid it completely, so our efforts should go to reducing it [as much] as possible. Commit messages can do exactly that and as a result, a commit message shows whether a developer is a good collaborator.
+> Re-establishing the context of a piece of code is wasteful. We can’t avoid it completely, so our efforts should go to reducing it [as much] as possible. Commit messages can do exactly that and as a result, a commit message shows whether a developer is a good collaborator.
 
 ---
 
