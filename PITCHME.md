@@ -126,6 +126,7 @@ See also: #456, #789
 ```
 ---
 
+```
 A properly formed Git commit subject line should always be able to complete the following sentence:
 
 - If applied, this commit will *your subject line here*
@@ -146,6 +147,7 @@ Notice how this doesn’t work for the other non-imperative forms:
 - If applied, this commit will sweet new API methods
 
 Remember: Use of the imperative is important only in the subject line. You can relax this restriction when you’re writing the body.
+```
 
 ---
 
