@@ -46,3 +46,95 @@ RuntimeException (extends Exception)
 
 ---
 
+## Custom Exception class
+
+PDOException
+  EdanzDatabaseException
+
+EdanzException
+  EdanzPaymentException
+    EdanzPaypalPaymentException
+    EdanzSMBCPaymentException
+  EdanzBackboneAPIException
+    EdanzR2BackboneAPIException
+    EdanzS2BackboneAPIException
+
+---
+
+## try .. catch
+
+<?php
+function inverse($x) {
+    if (!$x) {
+        throw new Exception('Division by zero.');
+    }
+    return 1/$x;
+}
+
+try {
+    echo inverse(5) . "\n";
+    echo inverse(0) . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// Continue execution
+echo "Hello World\n";
+?>
+
+---
+
+## catch .. finally
+
+<?php
+function inverse($x) {
+    if (!$x) {
+        throw new Exception('Division by zero.');
+    }
+    return 1/$x;
+}
+
+try {
+    echo inverse(5) . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+} finally {
+    echo "First finally.\n";
+}
+
+try {
+    echo inverse(0) . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+} finally {
+    echo "Second finally.\n";
+}
+
+// Continue execution
+echo "Hello World\n";
+?>
+
+---
+
+## catch .. catch
+
+  try {
+    $variables = get_backbone_jobs_table($uid);
+  }
+  catch (EdanzException $e) {
+    $e->handle();
+  }
+  catch (Exception $e) {
+    watchdog('backbone', $e->getMessage(), WATCHDOG_ERROR);
+  }
+
+---
+
+## ProjectX Exception handling
+
++ Backbone API calls
++ Payments
++ Database calls
++ ...
++ ...
+
