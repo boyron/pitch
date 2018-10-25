@@ -3,6 +3,9 @@
 - What are Exceptions?
 
 + Definition: An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. 
+
+---
+
 + Example: 
 	+ Memory leak
 	+ trying to get a nonexisitng object
@@ -14,6 +17,8 @@
 
 + Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the normal flow of program execution. 
 + It is provided by specialized programming language constructs, computer hardware mechanisms like interrupts or operating system IPC facilities like signals.
+
+---
 
 + Exceptions need to be handled gracefully.
 
@@ -41,6 +46,9 @@ Predefined Exception and The SPL Exception class
   + InvalidArgumentException
   + LengthException
   + OutOfRangeException
+
+---
+
 + RuntimeException (extends Exception)
   + OutOfBoundsException
   + OverflowException
@@ -108,7 +116,10 @@ try {
 } finally {
     echo "First finally.\n";
 }
-
+```
+---
+```
+<?php
 try {
     echo inverse(0) . "\n";
 } catch (Exception $e) {
@@ -119,7 +130,6 @@ try {
 
 // Continue execution
 echo "Hello World\n";
-?>
 ```
 
 ---
@@ -137,6 +147,8 @@ echo "Hello World\n";
     watchdog('backbone', $e->getMessage(), WATCHDOG_ERROR);
   }
 ```
+
+---
 
 ## Example
 
